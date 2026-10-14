@@ -44,6 +44,15 @@ select.fchip option { background: #000; }
 .quiz-opt { display: flex; align-items: center; gap: .6rem; background: #101010; border: 1px solid #27272a; border-radius: .6rem; padding: .55rem .8rem; font-size: 13px; cursor: pointer; }
 .quiz-opt:hover { border-color: rgba(255,212,0,.5); }
 .modal-pop { animation: pop .18s ease-out; }
+/* Ad slots: hidden until configured (js/ads.js); min-height reserves space to avoid layout shift */
+.ad-slot { min-height: 120px; background: #0a0a0a; border: 1px dashed #3f3f46; border-radius: .9rem; margin: 0; overflow: hidden; text-align: center; padding: 12px 8px; }
+.ad-slot::after { content: "Advertisement"; display: block; text-align: center; font-size: 10px; font-family: "JetBrains Mono", monospace; color: #52525b; padding: 4px; }
+/* Adsterra 300x250 banner: centered fixed-size inner, scaled down on very small phones */
+.ad-slot .ad-inner { width: 300px; max-width: 100%; margin: 0 auto; line-height: 0; }
+.ad-slot .ad-inner iframe { max-width: 100%; }
+@media (max-width: 360px) {
+  .ad-slot .ad-inner { transform: scale(.9); transform-origin: top center; }
+}
 @keyframes pop { from { transform: scale(.96) translateY(8px); opacity: 0; } to { transform: none; opacity: 1; } }
 input[type="checkbox"].tick { width: 18px; height: 18px; accent-color: #FFD400; }
 #sidebar.open { display: flex !important; position: fixed; top: 0; bottom: 0; left: 0; }
