@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Team Yoweri 24/7 — Tech Break-In Portal</title>
+<meta name="description" content="Roadmaps to break into tech: Coding & AI included. Team Yoweri 24/7 mission: creators, not seekers." />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: { void: '#050505', panel: '#101010', panel2: '#161616', buzz: '#FFD400', buzzdim: '#B89600' },
+      fontFamily: {
+        display: ['"Space Grotesk"', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace']
+      }
+    }
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-void text-zinc-100 font-body min-h-screen">
+
+<div class="flex min-h-screen">
+  <!-- Sidebar -->
+  <aside id="sidebar" class="fixed md:static z-40 w-64 shrink-0 h-screen bg-panel border-r border-zinc-800 flex-col hidden md:flex">
+    <div class="p-5 border-b border-zinc-800">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-buzz text-black font-display font-bold flex items-center justify-center text-lg">TY</div>
+        <div>
+          <p class="font-display font-bold leading-tight">TEAM YOWERI <span class="text-buzz">24/7</span></p>
+          <p class="text-[11px] text-zinc-400 font-mono">TECH BREAK-IN PORTAL</p>
+        </div>
+      </div>
+    </div>
+    <nav class="p-3 space-y-1 text-sm" id="sideNav">
+      <button data-route="dashboard" class="nav-btn active"><span class="nav-ico">◉</span> Dashboard</button>
+      <button data-route="roadmaps" class="nav-btn"><span class="nav-ico">☰</span> Roadmaps <span class="ml-auto text-[10px] font-mono bg-buzz text-black px-1.5 py-0.5 rounded">8 LIVE</span></button>
+      <button data-route="ai-lab" class="nav-btn"><span class="nav-ico">⚙</span> AI Lab <span class="ml-auto text-[10px] font-mono border border-buzz/50 text-buzz px-1.5 py-0.5 rounded">NEW</span></button>
+      <button data-route="resources" class="nav-btn"><span class="nav-ico">☰</span> Resources</button>
+      <button data-route="opportunities" class="nav-btn"><span class="nav-ico">↗</span> Opportunities</button>
+      <button data-route="mission" class="nav-btn"><span class="nav-ico">•</span> Mission</button>
+    </nav>
+    <div class="mt-auto p-4 space-y-3">
+      <div class="rounded-lg border border-buzz/30 bg-black/60 p-3">
+        <p class="text-xs font-semibold text-buzz">Creators, not seekers.</p>
+        <p class="text-[11px] text-zinc-400 mt-1">Join the community building Uganda's 200,000 scientists & engineers.</p>
+        <a href="https://web.facebook.com/share/g/1CEsr8rsys/" target="_blank" rel="noopener" class="mt-2 inline-block text-xs font-bold bg-buzz text-black px-3 py-1.5 rounded hover:bg-yellow-300">Join Facebook Group →</a>
+      </div>
+      <p class="text-[10px] text-zinc-600 font-mono text-center">Peace • Unity • Transformation</p>
+    </div>
+  </aside>
+
+  <!-- Main column -->
+  <div class="flex-1 min-w-0 flex flex-col">
+    <!-- Topbar -->
+    <header class="sticky top-0 z-30 bg-void/90 backdrop-blur border-b border-zinc-800 px-4 py-3 flex items-center gap-3">
+      <button id="menuBtn" class="md:hidden text-buzz text-xl px-2">☰</button>
+      <div class="flex-1 max-w-xl relative">
+        <input id="globalSearch" type="search" placeholder="Search tracks, phases, resources… (try 'python' or 'LLM')"
+          class="w-full bg-panel border border-zinc-700 rounded-lg pl-9 pr-3 py-2 text-sm outline-none focus:border-buzz placeholder:text-zinc-500" />
+        <span class="absolute left-3 top-2.5 text-zinc-500" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg></span>
+      </div>
+      <span id="streak" class="hidden sm:inline-block text-xs font-mono border border-zinc-700 rounded-full px-3 py-1.5">0-day streak</span>
+      <button id="favCount" onclick="openLibrary(false)" title="Saved resources" class="hidden text-xs font-mono border border-buzz/50 text-buzz rounded-full px-3 py-1.5 hover:bg-buzz hover:text-black">★ 0 saved</button>
+      <span id="levelBadge" class="text-xs font-mono bg-buzz text-black font-bold rounded-full px-3 py-1.5">EXPLORER</span>
+    </header>
+
+    <!-- View -->
+    <main id="view" class="p-4 md:p-8 max-w-6xl w-full mx-auto space-y-8">
+      <!-- Hero -->
+      <section class="relative overflow-hidden rounded-2xl border border-buzz/30 bg-gradient-to-br from-panel to-black p-6 md:p-10">
+        <div class="grid-bg absolute inset-0 pointer-events-none"></div>
+        <div class="relative">
+          <p class="text-[11px] font-mono text-buzz tracking-widest">TEAM YOWERI 24/7 • AFRICAN AGENDA</p>
+          <h1 class="font-display text-3xl md:text-5xl font-bold mt-2 leading-tight">Break into Tech.<br><span class="text-buzz">Coding &amp; A.I. included.</span></h1>
+          <p class="text-zinc-400 text-sm md:text-base mt-3 max-w-2xl">Detailed, modal-rich roadmaps + curated free resources. 20 years from now, be a <strong class="text-zinc-100">creator and distributor of opportunities</strong> — not a hunter of them.</p>
+          <div class="flex flex-wrap gap-3 mt-5">
+            <button onclick="openTrack('coding')" class="bg-buzz text-black font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-yellow-300">Start Coding →</button>
+            <button onclick="openTrack('ai-ml')" class="border border-buzz text-buzz font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-buzz hover:text-black">Start AI →</button>
+            <button onclick="openStarter()" class="text-xs text-zinc-300 underline underline-offset-4 decoration-buzz">or take the 45-day starter challenge →</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- KPIs -->
+      <section class="grid grid-cols-2 lg:grid-cols-4 gap-3" id="kpis">
+        <div class="kpi"><p class="kpi-num" id="kpiTracks">2</p><p class="kpi-label">Live tracks</p></div>
+        <div class="kpi"><p class="kpi-num" id="kpiResources">50</p><p class="kpi-label">Curated resources</p></div>
+        <div class="kpi"><p class="kpi-num" id="kpiDone">0</p><p class="kpi-label">Items completed</p></div>
+        <div class="kpi border-buzz/40"><p class="kpi-num text-buzz font-mono">200K</p><p class="kpi-label">Mission: scientists & engineers</p></div>
+      </section>
+
+      <!-- Continue -->
+      <section id="continueBar" class="hidden rounded-xl border border-buzz/40 bg-black p-4 flex items-center gap-4">
+        <span class="text-buzz text-xl" aria-hidden="true">▶</span>
+        <div class="flex-1">
+          <p class="text-xs font-mono text-buzz">CONTINUE WHERE YOU LEFT OFF</p>
+          <p class="text-sm font-semibold" id="continueText"></p>
+          <div class="h-1.5 bg-zinc-800 rounded mt-2"><div id="continueFill" class="h-1.5 bg-buzz rounded" style="width:0%"></div></div>
+        </div>
+        <button id="continueBtn" class="text-xs font-bold bg-buzz text-black px-4 py-2 rounded-lg">Resume</button>
+      </section>
+
+      <!-- Tracks -->
+      <section>
+        <div class="flex items-end justify-between mb-4">
+          <div>
+            <h2 class="font-display text-xl md:text-2xl font-bold">Choose your track</h2>
+            <p class="text-xs text-zinc-500">Click any card for the full interactive roadmap modal.</p>
+          </div>
+          <span class="text-[11px] font-mono text-zinc-500" id="resultCount"></span>
+        </div>
+        <div id="filterBar" class="mb-4 rounded-xl border border-zinc-800 bg-panel p-3"></div>
+        <div id="trackGrid" class="grid md:grid-cols-2 gap-4"></div>
+      </section>
+
+      <!-- How it works -->
+      <section class="grid md:grid-cols-3 gap-3 text-sm">
+        <div class="how"><span class="font-mono text-buzz">01</span><strong>Pick a track</strong><p>Open the roadmap modal. Every phase has skills, time-box & project.</p></div>
+        <div class="how"><span class="font-mono text-buzz">02</span><strong>Learn + tick off</strong><p>Use free resources inside modals. Progress saves on this device.</p></div>
+        <div class="how"><span class="font-mono text-buzz">03</span><strong>Build & share</strong><p>Ship the phase project, post it in the Facebook group, repeat.</p></div>
+      </section>
+
+      <footer class="text-center text-[11px] text-zinc-600 pt-4 pb-10 font-mono">
+        TEAM YOWERI 24/7 • Peace, Unity & Socio-Economic Transformation for Prosperity • <span id="year"></span>
+      </footer>
+    </main>
+  </div>
+</div>
+<div id="sideOverlay" class="hidden fixed inset-0 z-30 bg-black/60 md:hidden"></div>
+
+<!-- Modal root -->
+<div id="modalRoot" class="hidden fixed inset-0 z-50">
+  <div id="modalBackdrop" class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+  <div class="absolute inset-0 overflow-y-auto p-4 flex items-start md:items-center justify-center">
+    <div id="modalPanel" class="modal-pop relative w-full max-w-2xl bg-panel border border-buzz/30 rounded-2xl shadow-2xl">
+      <div class="flex items-start justify-between gap-3 p-5 border-b border-zinc-800">
+        <div>
+          <p id="modalKicker" class="text-[10px] font-mono text-buzz tracking-widest"></p>
+          <h2 id="modalTitle" class="font-display text-xl font-bold mt-1"></h2>
+          <p id="modalMeta" class="text-xs text-zinc-400 mt-1"></p>
+        </div>
+        <button id="modalClose" class="text-zinc-400 hover:text-buzz text-2xl leading-none px-2" aria-label="Close">×</button>
+      </div>
+      <div id="modalBody" class="p-5 space-y-4 max-h-[60vh] overflow-y-auto text-sm"></div>
+      <div id="modalActions" class="p-4 border-t border-zinc-800 flex flex-wrap gap-2"></div>
+    </div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/modals.js"></script>
+<script src="js/progress.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
