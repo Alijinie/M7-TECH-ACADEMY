@@ -265,8 +265,21 @@ tailwind.config = {
         </div>
       </section>
 
-      <!-- Ad Slot 1: below hero (activates after AdSense approval — see js/ads.js) -->
-      <div id="ad-below-hero" class="ad-slot" role="complementary" aria-label="Advertisement"></div>
+      <!-- Ad Slot 1: below hero — Adsterra Banner 300x250 (see js/ads.js for provider switch) -->
+      <div id="ad-below-hero" class="ad-slot" role="complementary" aria-label="Advertisement">
+        <div class="ad-inner">
+          <script type="text/javascript">
+            atOptions = {
+              'key' : '6afdabe25020b4ea95cc230f71703627',
+              'format' : 'iframe',
+              'height' : 250,
+              'width' : 300,
+              'params' : {}
+            };
+          </script>
+          <script type="text/javascript" src="https://www.highrevenueformat.com/6afdabe25020b4ea95cc230f71703627/invoke.js"></script>
+        </div>
+      </div>
 
       <!-- KPIs -->
       <section class="grid grid-cols-2 lg:grid-cols-4 gap-3" id="kpis">
@@ -300,8 +313,21 @@ tailwind.config = {
         <div id="trackGrid" class="grid md:grid-cols-2 gap-4"></div>
       </section>
 
-      <!-- Ad Slot 2: mid-content (activates after AdSense approval — see js/ads.js) -->
-      <div id="ad-mid-content" class="ad-slot" role="complementary" aria-label="Advertisement"></div>
+      <!-- Ad Slot 2: mid-content — Adsterra Banner 300x250 (see js/ads.js for provider switch) -->
+      <div id="ad-mid-content" class="ad-slot" role="complementary" aria-label="Advertisement">
+        <div class="ad-inner">
+          <script type="text/javascript">
+            atOptions = {
+              'key' : '6afdabe25020b4ea95cc230f71703627',
+              'format' : 'iframe',
+              'height' : 250,
+              'width' : 300,
+              'params' : {}
+            };
+          </script>
+          <script type="text/javascript" src="https://www.highrevenueformat.com/6afdabe25020b4ea95cc230f71703627/invoke.js"></script>
+        </div>
+      </div>
 
       <!-- How it works -->
       <section class="grid md:grid-cols-3 gap-3 text-sm">
@@ -315,7 +341,7 @@ tailwind.config = {
         <a class="underline hover:text-buzz" href="privacy.html">Privacy Policy</a> • <a class="underline hover:text-buzz" href="privacy.html#about">About</a>
       </footer>
 
-      <!-- Ad Slot 3: footer (activates after AdSense approval — see js/ads.js) -->
+      <!-- Ad Slot 3: footer (reserved for AdSense later — kept hidden while on Adsterra, see js/ads.js) -->
       <div id="ad-footer" class="ad-slot" role="complementary" aria-label="Advertisement"></div>
     </main>
   </div>
