@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# AI search and assistant crawlers are welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://m7tech.name.ng/sitemap.xml

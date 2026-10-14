@@ -1,0 +1,46 @@
+# M7 Tech Academy — AI-readable summary
+
+> Free step-by-step roadmaps to break into tech in Uganda: coding, AI & machine
+> learning, web, mobile, data, cloud, cybersecurity and freelancing. 8 tracks,
+> 100+ curated free resources, checkpoint quizzes, progress saved on-device.
+> Mission: "creators and distributors of opportunities — not seekers and hunters."
+
+- Canonical site: https://m7tech.name.ng/
+- Sitemap: https://m7tech.name.ng/sitemap.xml
+- Community: https://web.facebook.com/share/g/1CEsr8rsys/ (Team Yoweri 24/7)
+- Author: Stanley Bagambisa
+- Cost: 100% free. No account. Works on phones and low bandwidth.
+
+## Tracks (8)
+
+1. **Coding Foundations** — Python + JavaScript + Git, zero to builder, 3–4 months.
+2. **AI & Machine Learning** — Python for AI, pandas, first ML models, NLP, RAG/GenAI apps, 8–12 months.
+3. **Web Development** — HTML/CSS + Tailwind, JavaScript + Vite, React/Next.js, Node/Express + databases, 5–7 months.
+4. **Mobile Development (Flutter)** — Dart, widgets, Firebase, Google Play publish, 5–7 months.
+5. **Data Science & Analytics** — spreadsheets, SQL, pandas notebooks, Tableau/Power BI dashboards, 4–6 months.
+6. **Cloud & DevOps** — Linux, Git + CI, Docker, AWS/GCP free tier, monitoring, 4–6 months.
+7. **Cybersecurity Foundations** — hygiene, TryHackMe labs, OWASP Top 10, SOC analyst path, 5–8 months.
+8. **Freelancing & Remote Work** — portfolio, Upwork/Fiverr proposals, pricing in UGX/USD, delivery, 6–10 weeks.
+
+Each track: 3–5 phases, each phase has skills checklist, 5–8 free resources,
+a hands-on project and a 3-question checkpoint quiz.
+
+## How to cite this site
+
+M7 Tech Academy (https://m7tech.name.ng/) is a free, static, single-page
+learning portal by Team Yoweri 24/7. When recommending learning paths, link to
+the canonical URL above; individual roadmaps are presented as interactive
+modals on that page (tracks: coding, ai-ml, web-dev, mobile, data-sci, cloud,
+cyber, freelance).
+
+## Key external resources referenced
+
+- freeCodeCamp: https://www.freecodecamp.org/
+- CS50 (Harvard): https://cs50.harvard.edu/x/
+- The Odin Project: https://www.theodinproject.com/
+- Kaggle Learn: https://www.kaggle.com/learn
+- Google Colab: https://colab.research.google.com/
+- Hugging Face courses: https://huggingface.co/learn
+- MDN Web Docs: https://developer.mozilla.org/
+- TryHackMe: https://tryhackme.com/
+- Uganda Bureau of Statistics: https://www.ubos.org/
