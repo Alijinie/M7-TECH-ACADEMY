@@ -265,6 +265,9 @@ tailwind.config = {
         </div>
       </section>
 
+      <!-- Ad Slot 1: below hero (activates after AdSense approval — see js/ads.js) -->
+      <div id="ad-below-hero" class="ad-slot" role="complementary" aria-label="Advertisement"></div>
+
       <!-- KPIs -->
       <section class="grid grid-cols-2 lg:grid-cols-4 gap-3" id="kpis">
         <div class="kpi"><p class="kpi-num" id="kpiTracks">2</p><p class="kpi-label">Live tracks</p></div>
@@ -297,6 +300,9 @@ tailwind.config = {
         <div id="trackGrid" class="grid md:grid-cols-2 gap-4"></div>
       </section>
 
+      <!-- Ad Slot 2: mid-content (activates after AdSense approval — see js/ads.js) -->
+      <div id="ad-mid-content" class="ad-slot" role="complementary" aria-label="Advertisement"></div>
+
       <!-- How it works -->
       <section class="grid md:grid-cols-3 gap-3 text-sm">
         <div class="how"><span class="font-mono text-buzz">01</span><strong>Pick a track</strong><p>Open the roadmap modal. Every phase has skills, time-box & project.</p></div>
@@ -305,8 +311,12 @@ tailwind.config = {
       </section>
 
       <footer class="text-center text-[11px] text-zinc-600 pt-4 pb-10 font-mono">
-        TEAM YOWERI 24/7 • Peace, Unity & Socio-Economic Transformation for Prosperity • <span id="year"></span>
+        TEAM YOWERI 24/7 • Peace, Unity & Socio-Economic Transformation for Prosperity • <span id="year"></span><br>
+        <a class="underline hover:text-buzz" href="privacy.html">Privacy Policy</a> • <a class="underline hover:text-buzz" href="privacy.html#about">About</a>
       </footer>
+
+      <!-- Ad Slot 3: footer (activates after AdSense approval — see js/ads.js) -->
+      <div id="ad-footer" class="ad-slot" role="complementary" aria-label="Advertisement"></div>
     </main>
   </div>
 </div>
@@ -336,5 +346,6 @@ tailwind.config = {
 <script src="js/modals.js"></script>
 <script src="js/progress.js"></script>
 <script src="js/app.js"></script>
+<script src="js/ads.js"></script>
 </body>
 </html>
