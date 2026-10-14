@@ -1,10 +1,13 @@
-/* AdSense scaffolding — static slots only (never inside modals, per AdSense policy).
-   HOW TO GO LIVE:
-   1. Apply at https://www.google.com/adsense with https://m7tech.name.ng/
-   2. Paste your publisher ID below (ca-pub-XXXXXXXXXXXXXXXX)
-   3. Create 3 display ad units, paste each slot ID into AD_SLOTS
-   4. Add the same publisher ID to ads.txt, then push to GitHub Pages.
-   Until ADSENSE_CLIENT is set, all .ad-slot placeholders stay hidden. */
+/* Ad provider switch — static slots only (never inside modals, per AdSense policy).
+   CURRENT: AD_PROVIDER = 'adsterra' (Banner 300x250, key in index.html + Adsterra Banner300x250.txt).
+   TO SHIFT TO ADSENSE LATER:
+   1. Set AD_PROVIDER = 'adsense'.
+   2. Paste your publisher ID into ADSENSE_CLIENT (ca-pub-XXXXXXXXXXXXXXXX).
+   3. Create 3 display ad units, paste each slot ID into AD_SLOTS.
+   4. Remove the two static Adsterra <script> blocks from index.html
+      (ad-below-hero + ad-mid-content), keep the empty slot divs.
+   5. Put the same publisher ID in ads.txt, then push to GitHub Pages. */
+const AD_PROVIDER = 'adsterra'; // 'adsterra' | 'adsense'
 const ADSENSE_CLIENT = ''; // e.g. 'ca-pub-1234567890123456'
 const AD_SLOTS = {
   'ad-below-hero': '', // e.g. '1234567890'
@@ -13,6 +16,17 @@ const AD_SLOTS = {
 };
 
 function initAds() {
+  if (AD_PROVIDER === 'adsterra') {
+    // Adsterra banners are statically embedded in index.html (reliable vs document.write).
+    // Just hide the reserved footer slot while on the 2-slot Adsterra setup.
+    const footer = document.getElementById('ad-footer');
+    if (footer) footer.style.display = 'none';
+    document.querySelectorAll('.ad-slot').forEach(s => {
+      if (s.id === 'ad-footer') return;
+      s.style.display = 'block';
+    });
+    return;
+  }
   if (!ADSENSE_CLIENT) {
     document.querySelectorAll('.ad-slot').forEach(s => { s.style.display = 'none'; });
     return;
