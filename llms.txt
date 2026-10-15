@@ -1,13 +1,13 @@
 # M7 Tech Academy — AI-readable summary
 
-> Free step-by-step roadmaps to break into tech in Uganda: coding, AI & machine
+> Free step-by-step roadmaps to break into tech in Africa & Asia: coding, AI & machine
 > learning, web, mobile, data, cloud, cybersecurity and freelancing. 8 tracks,
 > 100+ curated free resources, checkpoint quizzes, progress saved on-device.
 > Mission: "creators and distributors of opportunities — not seekers and hunters."
 
 - Canonical site: https://m7tech.name.ng/
 - Sitemap: https://m7tech.name.ng/sitemap.xml
-- Community: https://web.facebook.com/share/g/1CEsr8rsys/ (Team Yoweri 24/7)
+- Community: https://web.facebook.com/share/g/1GZ5wMAJMa/ (Team Yoweri 24/7)
 - Author: Stanley Bagambisa
 - Cost: 100% free. No account. Works on phones and low bandwidth.
 
@@ -20,7 +20,7 @@
 5. **Data Science & Analytics** — spreadsheets, SQL, pandas notebooks, Tableau/Power BI dashboards, 4–6 months.
 6. **Cloud & DevOps** — Linux, Git + CI, Docker, AWS/GCP free tier, monitoring, 4–6 months.
 7. **Cybersecurity Foundations** — hygiene, TryHackMe labs, OWASP Top 10, SOC analyst path, 5–8 months.
-8. **Freelancing & Remote Work** — portfolio, Upwork/Fiverr proposals, pricing in UGX/USD, delivery, 6–10 weeks.
+8. **Freelancing & Remote Work** — portfolio, Upwork/Fiverr proposals, pricing in USD + local currency, delivery, 6–10 weeks.
 
 Each track: 3–5 phases, each phase has skills checklist, 5–8 free resources,
 a hands-on project and a 3-question checkpoint quiz.
@@ -43,4 +43,5 @@ cyber, freelance).
 - Hugging Face courses: https://huggingface.co/learn
 - MDN Web Docs: https://developer.mozilla.org/
 - TryHackMe: https://tryhackme.com/
-- Uganda Bureau of Statistics: https://www.ubos.org/
+- World Bank Open Data: https://data.worldbank.org/
+- Humanitarian Data Exchange: https://data.humdata.org/
