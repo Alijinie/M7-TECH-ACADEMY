@@ -1,5 +1,8 @@
 /* Ad provider switch — static slots only (never inside modals, per AdSense policy).
    CURRENT: AD_PROVIDER = 'adsterra' (Banner 300x250, key in index.html + Adsterra Banner300x250.txt).
+   NOTE: Adsterra Social Bar (pl31870595.profitableratecpmnetwork.com/...js) is site-wide
+   static in index.html + privacy.html + jsCodingChallenges.html and is independent of
+   AD_PROVIDER — do not remove it when migrating banners to AdSense.
    TO SHIFT TO ADSENSE LATER:
    1. Set AD_PROVIDER = 'adsense'.
    2. Paste your publisher ID into ADSENSE_CLIENT (ca-pub-XXXXXXXXXXXXXXXX).

@@ -258,6 +258,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('#sideNav .nav-btn').forEach(x => x.classList.remove('active'));
     b.classList.add('active');
     closeSidebar();
+    // Plain links (e.g. JS Challenges page) use default navigation.
+    if (b.tagName === 'A' && b.getAttribute('href')) return;
     const r = b.dataset.route;
     if (r === 'roadmaps') document.getElementById('trackGrid').scrollIntoView({ behavior: 'smooth' });
     else if (r === 'ai-lab') openPhase('ai-ml', 0);
